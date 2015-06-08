@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x3t-3F-akc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL4-Lx-WRf">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL4-Lx-WRf">
                                 <rect key="frame" x="277" y="285" width="46" height="30"/>
                                 <state key="normal" image="microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,7 +40,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zhp-C3-lju"/>
-                                    <segue destination="YN9-bU-WfX" kind="show" id="vl1-dO-4i4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,11 +58,11 @@
                                 <exclude reference="VO3-NY-DUV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ZRm-Lv-UgG"/>
-                                <exclude reference="czO-gv-FKJ"/>
                                 <exclude reference="sf9-3Q-zAx"/>
                                 <exclude reference="utc-MC-f3p"/>
                                 <exclude reference="HHg-Xs-dzF"/>
+                                <exclude reference="ZRm-Lv-UgG"/>
+                                <exclude reference="czO-gv-FKJ"/>
                                 <exclude reference="e5W-sU-Mdg"/>
                             </mask>
                         </variation>
@@ -72,11 +72,11 @@
                                 <include reference="VO3-NY-DUV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ZRm-Lv-UgG"/>
-                                <include reference="czO-gv-FKJ"/>
                                 <include reference="sf9-3Q-zAx"/>
                                 <include reference="utc-MC-f3p"/>
                                 <include reference="HHg-Xs-dzF"/>
+                                <include reference="ZRm-Lv-UgG"/>
+                                <include reference="czO-gv-FKJ"/>
                                 <include reference="e5W-sU-Mdg"/>
                             </mask>
                         </variation>
@@ -86,6 +86,7 @@
                         <outlet property="recordButton" destination="gL4-Lx-WRf" id="Rmt-BM-WDd"/>
                         <outlet property="recordingInProgress" destination="Bg3-9G-mG3" id="yEv-Dm-F0p"/>
                         <outlet property="stopButton" destination="VO3-NY-DUV" id="d6a-Ta-3WU"/>
+                        <segue destination="YN9-bU-WfX" kind="show" identifier="stopRecording" id="BHb-Cw-ejp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -152,12 +153,12 @@
                                 <exclude reference="0QW-Ji-fev"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="ntb-xO-kr7"/>
+                                <exclude reference="eLo-Ac-Hc1"/>
                                 <exclude reference="Bea-jS-JI4"/>
                                 <exclude reference="JZ1-RL-DGH"/>
                                 <exclude reference="OO2-Uf-qfl"/>
                                 <exclude reference="MzY-4N-bRG"/>
-                                <exclude reference="eLo-Ac-Hc1"/>
-                                <exclude reference="ntb-xO-kr7"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -167,12 +168,12 @@
                                 <include reference="0QW-Ji-fev"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ntb-xO-kr7"/>
+                                <include reference="eLo-Ac-Hc1"/>
                                 <include reference="Bea-jS-JI4"/>
                                 <include reference="JZ1-RL-DGH"/>
                                 <include reference="OO2-Uf-qfl"/>
                                 <include reference="MzY-4N-bRG"/>
-                                <include reference="eLo-Ac-Hc1"/>
-                                <include reference="ntb-xO-kr7"/>
                             </mask>
                         </variation>
                     </view>

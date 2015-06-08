@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B905D9031B257CE60053B7C2 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905D9021B257CE60053B7C2 /* RecordedAudio.swift */; };
 		B92CD73D1B248E4500C3C335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CD73C1B248E4500C3C335 /* AppDelegate.swift */; };
-		B92CD73F1B248E4500C3C335 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CD73E1B248E4500C3C335 /* ViewController.swift */; };
+		B92CD73F1B248E4500C3C335 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CD73E1B248E4500C3C335 /* RecordSoundsViewController.swift */; };
 		B92CD7421B248E4500C3C335 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92CD7401B248E4500C3C335 /* Main.storyboard */; };
 		B92CD7441B248E4500C3C335 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92CD7431B248E4500C3C335 /* Images.xcassets */; };
 		B92CD7471B248E4500C3C335 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92CD7451B248E4500C3C335 /* LaunchScreen.xib */; };
@@ -28,10 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B905D9021B257CE60053B7C2 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 		B92CD7371B248E4500C3C335 /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92CD73B1B248E4500C3C335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B92CD73C1B248E4500C3C335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B92CD73E1B248E4500C3C335 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B92CD73E1B248E4500C3C335 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		B92CD7411B248E4500C3C335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B92CD7431B248E4500C3C335 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B92CD7461B248E4500C3C335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -82,7 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				B92CD73C1B248E4500C3C335 /* AppDelegate.swift */,
-				B92CD73E1B248E4500C3C335 /* ViewController.swift */,
+				B92CD73E1B248E4500C3C335 /* RecordSoundsViewController.swift */,
+				B905D9021B257CE60053B7C2 /* RecordedAudio.swift */,
 				B92CD7401B248E4500C3C335 /* Main.storyboard */,
 				B92CD75C1B255F8000C3C335 /* PlaySoundsViewController.swift */,
 				B92CD7431B248E4500C3C335 /* Images.xcassets */,
@@ -219,7 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92CD73F1B248E4500C3C335 /* ViewController.swift in Sources */,
+				B905D9031B257CE60053B7C2 /* RecordedAudio.swift in Sources */,
+				B92CD73F1B248E4500C3C335 /* RecordSoundsViewController.swift in Sources */,
 				B92CD75D1B255F8000C3C335 /* PlaySoundsViewController.swift in Sources */,
 				B92CD73D1B248E4500C3C335 /* AppDelegate.swift in Sources */,
 			);
@@ -417,6 +421,7 @@
 				B92CD7581B248E4500C3C335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B92CD7591B248E4500C3C335 /* Build configuration list for PBXNativeTarget "Pitch PerfectTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				B92CD75B1B248E4500C3C335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
