@@ -33,6 +33,8 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playAudioAtRate(rate: Float){
+        audioEngine.stop()
+        audioEngine.reset()
         audioPlayer.stop()
         audioPlayer.rate = rate
         audioPlayer.currentTime = 0.0
@@ -48,6 +50,8 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func stopAudio(sender: UIButton) {
+        audioEngine.stop()
+        audioEngine.reset()
         audioPlayer.stop()
     }
     
