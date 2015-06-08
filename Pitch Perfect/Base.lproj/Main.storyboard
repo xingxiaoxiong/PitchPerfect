@@ -152,12 +152,24 @@
                                     <action selector="playDarthvaderAudio:" destination="YN9-bU-WfX" eventType="touchUpInside" id="mJo-b8-Axi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjb-IP-El9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reverb">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playReverbEffect:" destination="YN9-bU-WfX" eventType="touchUpInside" id="uoc-An-Edx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.56862745100000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gIM-9C-Uhm" firstAttribute="top" secondItem="iqk-8o-Brt" secondAttribute="bottom" constant="63" id="Bea-jS-JI4">
                                 <variation key="widthClass=compact" constant="59"/>
                             </constraint>
+                            <constraint firstItem="rjb-IP-El9" firstAttribute="leading" secondItem="scc-KQ-YYS" secondAttribute="leadingMargin" constant="42" id="HrD-Ic-kcA"/>
                             <constraint firstItem="gIM-9C-Uhm" firstAttribute="centerY" secondItem="vXN-ZO-Ey5" secondAttribute="centerY" id="JZ1-RL-DGH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vXN-ZO-Ey5" secondAttribute="trailing" constant="23" id="MzY-4N-bRG"/>
                             <constraint firstItem="gIM-9C-Uhm" firstAttribute="leading" secondItem="scc-KQ-YYS" secondAttribute="leadingMargin" constant="61" id="OO2-Uf-qfl">
@@ -168,6 +180,7 @@
                             <constraint firstItem="Xs6-YE-M3T" firstAttribute="centerX" secondItem="gIM-9C-Uhm" secondAttribute="centerX" id="h3i-96-6iF"/>
                             <constraint firstItem="Xs6-YE-M3T" firstAttribute="centerY" secondItem="h02-tV-RL1" secondAttribute="centerY" id="mC1-7e-KY0"/>
                             <constraint firstItem="YUH-eZ-xFg" firstAttribute="top" secondItem="0QW-Ji-fev" secondAttribute="bottom" constant="50" id="ntb-xO-kr7"/>
+                            <constraint firstItem="rjb-IP-El9" firstAttribute="top" secondItem="Xs6-YE-M3T" secondAttribute="bottom" constant="46" id="psf-md-nPs"/>
                             <constraint firstItem="Xs6-YE-M3T" firstAttribute="top" secondItem="gIM-9C-Uhm" secondAttribute="bottom" constant="44" id="wtF-m8-5ng"/>
                         </constraints>
                         <variation key="default">
@@ -177,6 +190,7 @@
                                 <exclude reference="0QW-Ji-fev"/>
                                 <exclude reference="Xs6-YE-M3T"/>
                                 <exclude reference="h02-tV-RL1"/>
+                                <exclude reference="rjb-IP-El9"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Bea-jS-JI4"/>
@@ -187,6 +201,8 @@
                                 <exclude reference="wtF-m8-5ng"/>
                                 <exclude reference="MzY-4N-bRG"/>
                                 <exclude reference="f7M-NO-HWh"/>
+                                <exclude reference="HrD-Ic-kcA"/>
+                                <exclude reference="psf-md-nPs"/>
                                 <exclude reference="eLo-Ac-Hc1"/>
                                 <exclude reference="ntb-xO-kr7"/>
                             </mask>
@@ -198,6 +214,7 @@
                                 <include reference="0QW-Ji-fev"/>
                                 <include reference="Xs6-YE-M3T"/>
                                 <include reference="h02-tV-RL1"/>
+                                <include reference="rjb-IP-El9"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Bea-jS-JI4"/>
@@ -208,6 +225,8 @@
                                 <include reference="wtF-m8-5ng"/>
                                 <include reference="MzY-4N-bRG"/>
                                 <include reference="f7M-NO-HWh"/>
+                                <include reference="HrD-Ic-kcA"/>
+                                <include reference="psf-md-nPs"/>
                                 <include reference="eLo-Ac-Hc1"/>
                                 <include reference="ntb-xO-kr7"/>
                             </mask>
