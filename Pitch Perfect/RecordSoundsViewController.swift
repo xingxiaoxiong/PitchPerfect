@@ -26,6 +26,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
         recordButton.enabled = true
+        recordingInProgress.text = "Tap to record"
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +36,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordAudio(sender: UIButton) {
         stopButton.hidden = false
-        recordingInProgress.hidden = false
+        recordingInProgress.text = "Recording in progress"
         recordButton.enabled = false
         
         
@@ -44,7 +45,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let recordingName = "my_audio.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        println(filePath)
         
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
@@ -56,9 +56,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
     }
 
-    @IBAction func stopAudio(sender: UIButton) {
-        recordingInProgress.hidden = true
-        
+    @IBAction func stopAudio(sender: UIButton) {        
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)

@@ -27,15 +27,6 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d6I-CP-9jF"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg3-9G-mG3">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
-                                <color key="textColor" red="0.10196078431372549" green="0.21568627450980393" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="167" y="380" width="67" height="18"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO3-NY-DUV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stopbutton">
@@ -45,6 +36,12 @@
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zhp-C3-lju"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg3-9G-mG3">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                <color key="textColor" red="0.10196078431372549" green="0.21568627450980393" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.56862745100000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -52,13 +49,15 @@
                             <constraint firstAttribute="centerY" secondItem="gL4-Lx-WRf" secondAttribute="centerY" id="ZRm-Lv-UgG"/>
                             <constraint firstAttribute="centerX" secondItem="gL4-Lx-WRf" secondAttribute="centerX" id="czO-gv-FKJ"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VO3-NY-DUV" secondAttribute="bottom" constant="47" id="e5W-sU-Mdg"/>
-                            <constraint firstItem="Bg3-9G-mG3" firstAttribute="top" secondItem="gL4-Lx-WRf" secondAttribute="bottom" constant="30" id="sf9-3Q-zAx"/>
+                            <constraint firstItem="Bg3-9G-mG3" firstAttribute="top" secondItem="gL4-Lx-WRf" secondAttribute="bottom" constant="30" id="sf9-3Q-zAx">
+                                <variation key="widthClass=compact" constant="16"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="Bg3-9G-mG3" secondAttribute="centerX" constant="-0.5" id="utc-MC-f3p"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Bg3-9G-mG3"/>
                                 <exclude reference="VO3-NY-DUV"/>
+                                <exclude reference="Bg3-9G-mG3"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="sf9-3Q-zAx"/>
@@ -71,8 +70,8 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Bg3-9G-mG3"/>
                                 <include reference="VO3-NY-DUV"/>
+                                <include reference="Bg3-9G-mG3"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="sf9-3Q-zAx"/>
