@@ -15,6 +15,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var resumeButton: UIButton!
+    
     var audioRecorder:AVAudioRecorder!
     var recordedAudio:RecordedAudio!
     
@@ -24,6 +27,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
+        pauseButton.hidden = true
+        pauseButton.enabled = false
+        resumeButton.hidden = true
+        resumeButton.enabled = false
         recordButton.enabled = true
         recordingInProgress.text = "Tap to record"
     }
@@ -35,6 +42,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         stopButton.hidden = false
         recordingInProgress.text = "Recording in progress"
+        pauseButton.hidden = false
+        pauseButton.enabled = true
         recordButton.enabled = false
         
         
@@ -53,8 +62,31 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.prepareToRecord()
         audioRecorder.record()
     }
+    
+    @IBAction func pauseRecord(sender: UIButton) {
+        pauseButton.hidden = true
+        pauseButton.enabled = false
+        resumeButton.hidden = false
+        resumeButton.enabled = true
+        audioRecorder.pause()
+        recordingInProgress.text = "Recording paused"
+    }
+    
+    @IBAction func resumeRecord(sender: UIButton) {
+        resumeButton.hidden = true
+        resumeButton.enabled = false
+        pauseButton.hidden = false
+        pauseButton.enabled = true
+        audioRecorder.record()
+        recordingInProgress.text = "Recording in progress"
+    }
 
-    @IBAction func stopAudio(sender: UIButton) {        
+    @IBAction func stopAudio(sender: UIButton) {
+        pauseButton.hidden = true
+        pauseButton.enabled = false
+        resumeButton.hidden = true
+        resumeButton.enabled = false
+        
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
