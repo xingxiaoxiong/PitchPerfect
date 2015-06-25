@@ -58,7 +58,6 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact"/>
                                 <connections>
                                     <action selector="pauseRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TUu-BR-8II"/>
                                 </connections>
@@ -89,15 +88,15 @@
                                 <exclude reference="yQo-xP-PSs"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ZRm-Lv-UgG"/>
-                                <exclude reference="czO-gv-FKJ"/>
                                 <exclude reference="sf9-3Q-zAx"/>
                                 <exclude reference="utc-MC-f3p"/>
                                 <exclude reference="0Ic-dX-rf3"/>
                                 <exclude reference="PRy-GI-6BM"/>
-                                <exclude reference="Heg-ax-5XY"/>
                                 <exclude reference="HHg-Xs-dzF"/>
                                 <exclude reference="wyI-Oe-Gf0"/>
+                                <exclude reference="Heg-ax-5XY"/>
+                                <exclude reference="ZRm-Lv-UgG"/>
+                                <exclude reference="czO-gv-FKJ"/>
                                 <exclude reference="e5W-sU-Mdg"/>
                             </mask>
                         </variation>
@@ -109,15 +108,15 @@
                                 <include reference="yQo-xP-PSs"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ZRm-Lv-UgG"/>
-                                <include reference="czO-gv-FKJ"/>
                                 <include reference="sf9-3Q-zAx"/>
                                 <include reference="utc-MC-f3p"/>
                                 <include reference="0Ic-dX-rf3"/>
                                 <include reference="PRy-GI-6BM"/>
-                                <include reference="Heg-ax-5XY"/>
                                 <include reference="HHg-Xs-dzF"/>
                                 <include reference="wyI-Oe-Gf0"/>
+                                <include reference="Heg-ax-5XY"/>
+                                <include reference="ZRm-Lv-UgG"/>
+                                <include reference="czO-gv-FKJ"/>
                                 <include reference="e5W-sU-Mdg"/>
                             </mask>
                         </variation>
@@ -200,7 +199,6 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact"/>
                                 <connections>
                                     <action selector="playReverbEffect:" destination="YN9-bU-WfX" eventType="touchUpInside" id="uoc-An-Edx"/>
                                 </connections>
@@ -239,18 +237,18 @@
                                 <exclude reference="rjb-IP-El9"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Bea-jS-JI4"/>
-                                <exclude reference="JZ1-RL-DGH"/>
-                                <exclude reference="OO2-Uf-qfl"/>
+                                <exclude reference="ntb-xO-kr7"/>
+                                <exclude reference="eLo-Ac-Hc1"/>
                                 <exclude reference="h3i-96-6iF"/>
                                 <exclude reference="mC1-7e-KY0"/>
                                 <exclude reference="wtF-m8-5ng"/>
-                                <exclude reference="MzY-4N-bRG"/>
+                                <exclude reference="Bea-jS-JI4"/>
+                                <exclude reference="JZ1-RL-DGH"/>
+                                <exclude reference="OO2-Uf-qfl"/>
                                 <exclude reference="f7M-NO-HWh"/>
                                 <exclude reference="HrD-Ic-kcA"/>
                                 <exclude reference="psf-md-nPs"/>
-                                <exclude reference="eLo-Ac-Hc1"/>
-                                <exclude reference="ntb-xO-kr7"/>
+                                <exclude reference="MzY-4N-bRG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -263,18 +261,18 @@
                                 <include reference="rjb-IP-El9"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Bea-jS-JI4"/>
-                                <include reference="JZ1-RL-DGH"/>
-                                <include reference="OO2-Uf-qfl"/>
+                                <include reference="ntb-xO-kr7"/>
+                                <include reference="eLo-Ac-Hc1"/>
                                 <include reference="h3i-96-6iF"/>
                                 <include reference="mC1-7e-KY0"/>
                                 <include reference="wtF-m8-5ng"/>
-                                <include reference="MzY-4N-bRG"/>
+                                <include reference="Bea-jS-JI4"/>
+                                <include reference="JZ1-RL-DGH"/>
+                                <include reference="OO2-Uf-qfl"/>
                                 <include reference="f7M-NO-HWh"/>
                                 <include reference="HrD-Ic-kcA"/>
                                 <include reference="psf-md-nPs"/>
-                                <include reference="eLo-Ac-Hc1"/>
-                                <include reference="ntb-xO-kr7"/>
+                                <include reference="MzY-4N-bRG"/>
                             </mask>
                         </variation>
                     </view>
