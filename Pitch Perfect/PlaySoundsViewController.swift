@@ -11,11 +11,11 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
-    var audioPlayer:AVAudioPlayer!
-    var receivedAudio:RecordedAudio!
+    var audioPlayer: AVAudioPlayer!
+    var receivedAudio: RecordedAudio!
     
-    var audioEngine:AVAudioEngine!
-    var audioFile:AVAudioFile!
+    var audioEngine: AVAudioEngine!
+    var audioFile: AVAudioFile!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playAudioAtRate(rate: Float){
-        audioEngine.stop()
-        audioEngine.reset()
-        audioPlayer.stop()
+        stopAudioEngineAndPlayer()
         audioPlayer.rate = rate
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
@@ -50,9 +48,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func stopAudio(sender: UIButton) {
-        audioEngine.stop()
-        audioEngine.reset()
-        audioPlayer.stop()
+        stopAudioEngineAndPlayer()
     }
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
@@ -64,9 +60,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playReverbEffect(sender: UIButton) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioEngineAndPlayer()
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -85,9 +79,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playAudioWithVariablePitch(pitch: Float){
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioEngineAndPlayer()
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -103,6 +95,12 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.startAndReturnError(nil)
         
         audioPlayerNode.play()
+    }
+    
+    func stopAudioEngineAndPlayer() {
+        audioEngine.stop()
+        audioEngine.reset()
+        audioPlayer.stop()
     }
 
 }
